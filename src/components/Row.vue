@@ -5,8 +5,8 @@
     </div>
     <div class="name">{{ rowData.name }}</div>
     <div class="symbol">{{ rowData.symbol }}</div>
-    <div class="price">{{ rowData.price }}</div>
-    <div class="price-change">{{ rowData.change }}</div>
+    <div class="price">$ {{rowData.price | formatPrice}}</div>
+    <div class="price-change">{{ rowData.change }}%</div>
   </div>
 </template>
 
@@ -21,6 +21,11 @@ export default {
 
     }
   },
+  filters: {
+  formatPrice: function (value) {
+    return Number.parseFloat(value).toFixed(4)
+  }
+}
 };
 </script>
 
@@ -34,7 +39,12 @@ align-items: center;
     flex: 1;
 }
 .icon-img{
-  width: 50%;
+  width: 30%;
+  padding-left: 15%;
+  padding-top:10%;
+  padding-bottom:10%;
+
 }
+
 
 </style>

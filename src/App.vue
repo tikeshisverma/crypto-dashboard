@@ -38,4 +38,10 @@ getdata: function(){ fetch(' https://api.coinranking.com/v1/public/coins/?limit=
   color: #2c3e50;
   margin-top: 60px;
 }
+
+@media only screen and (max-width: 420px) {
+  #app {
+    font-size: 12px;
+  }
+}
 </style>
