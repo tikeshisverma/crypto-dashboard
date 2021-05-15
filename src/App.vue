@@ -36,7 +36,7 @@ getdata: function(){ fetch(' https://api.coinranking.com/v1/public/coins/?limit=
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 @media only screen and (max-width: 420px) {
