@@ -68,9 +68,10 @@ export default {
 <style scoped>
 .table {
   margin: 2.5%;
-  border: 5px solid #0000001a;
+  /* border: 5px solid #0000001a; */
   padding: 2.5%;
   border-radius: 2%;
+  box-shadow: inset 8px 8px 16px 0 rgb(0 0 0 / 20%), inset -8px -8px 16px 0 rgb(255 255 255 / 40%);
 }
 
 .button-wrepper {

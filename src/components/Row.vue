@@ -35,6 +35,7 @@ export default {
 
 <style scoped>
 .row-wrapper{
+  height: 66px;
   display: flex;
 align-items: center;
     box-shadow: 0 13px 27px -5px rgb(50 50 93 / 10%), 0 8px 16px -8px rgb(0 0 0 / 10%), 0 -6px 16px -6px rgb(0 0 0 / 1%);
