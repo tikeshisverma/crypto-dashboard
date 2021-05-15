@@ -1,32 +1,37 @@
 <template>
   <div id="app">
-  <Table :data="cryptoData"/>
-
+    <Table/>
   </div>
 </template>
 
 <script>
-import Table from "./components/Table"
+import Table from "./components/Table";
 
 export default {
   name: "App",
-  data(){
-    return{
-cryptoData:{}
-    }
-  },
   components: {
-    Table
+    Table,
   },
-  mounted(){
-    this.getdata()
+  mounted() {
+    this.getdata();
   },
-  methods:{
-getdata: function(){ fetch(' https://api.coinranking.com/v1/public/coins/?limit=100')
-  .then(response => response.json())
-  .then(response=>{this.cryptoData = response
-  console.log(response)} );
-  }}
+  methods: {
+    getdata: function () {
+      fetch(" https://api.coinranking.com/v1/public/coins/?limit=100")
+        .then((response) => response.json())
+        .then((response) => {
+          const {
+            data: { coins }, 
+            status
+          } = response;
+          if (status === 'success') {
+          this.$store.commit("setCoinData", coins);
+          } else {
+            this.$store.commit('setErrorStatus',{message: 'API Error has occured! Please try again.'})
+          }
+        });
+    },
+  },
 };
 </script>
 

@@ -15,7 +15,7 @@
       </select>
     </header>
     <Row
-      v-for="item in data.data.coins.slice(start, end)"
+      v-for="item in this.$store.state.coinData.slice(start, end)"
       :key="item.id"
       :rowData="item"
     />
@@ -48,7 +48,6 @@ export default {
     };
   },
 
-  props: { data: Object },
   methods: {
     next10() {
       this.start += this.rowPerPage;
