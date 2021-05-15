@@ -14,6 +14,13 @@
         <option>100</option>
       </select>
     </header>
+    <div class="label-row-wrapper">
+      <div class="icon">Logo</div>
+      <div class="name">Name</div>
+      <div class="symbol">Symbol</div>
+      <div class="price">Price</div>
+      <div class="price-change">Change</div>
+    </div>
     <Row
       v-for="item in this.$store.state.coinData.slice(start, end)"
       :key="item.id"
@@ -71,7 +78,8 @@ export default {
   /* border: 5px solid #0000001a; */
   padding: 2.5%;
   border-radius: 2%;
-  box-shadow: inset 8px 8px 16px 0 rgb(0 0 0 / 20%), inset -8px -8px 16px 0 rgb(255 255 255 / 40%);
+  box-shadow: inset 8px 8px 16px 0 rgb(0 0 0 / 20%),
+    inset -8px -8px 16px 0 rgb(255 255 255 / 40%);
 }
 
 .button-wrepper {
@@ -80,14 +88,14 @@ export default {
   justify-content: center;
   margin-top: 5%;
 }
-.button-wrepper button{
+.button-wrepper button {
   width: 1.5em;
   height: 1.5em;
   border-radius: 100%;
   border-color: #0000001a;
   font-size: 1.5em;
   font-weight: bold;
-  color:#0000005f ;
+  color: #0000005f;
   outline: none;
 }
 .previous-icon {
@@ -114,5 +122,44 @@ header {
   min-width: 50px;
   max-width: 70px;
 }
+/* Column name row styles */
+.label-row-wrapper {
+  box-sizing: border-box;
+  height: 66px;
+  display: flex;
+  padding: 1em 1.5em;
+  text-align: center;
+  align-items: center;
+  box-shadow: 0 13px 27px -5px rgb(50 50 93 / 10%),
+    0 8px 16px -8px rgb(0 0 0 / 10%), 0 -6px 16px -6px rgb(0 0 0 / 1%);
 
+  position: sticky;
+  top: 0px;
+  opacity: 100;
+  background: #424242;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: start;
+}
+.price,
+.symbol {
+  width: 22%;
+}
+.name {
+  width: 20%;
+}
+.icon,
+.change {
+  width: 18%;
+}
+.price-change {
+  font-weight: 500;
+}
+.icon-img {
+  width: 30%;
+  padding-left: 15%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
 </style>

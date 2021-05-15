@@ -39,7 +39,7 @@ export default {
     getdata: function () {
       fetch(" https://api.coinranking.com/v1/public/coins/?limit=100")
         .then((response) => response.json())
-        .then(() => {
+        .then((response) => {
           const {
             data: { coins },
             status
