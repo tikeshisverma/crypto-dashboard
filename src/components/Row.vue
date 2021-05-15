@@ -65,6 +65,7 @@ export default {
 }
 .icon-img {
   width: 30%;
+  max-width: 30px;
   padding-left: 15%;
   padding-top: 10%;
   padding-bottom: 10%;

@@ -1,7 +1,7 @@
 <template>
   <div class="table">
     <header>
-      <h1>TITLE</h1>
+      <h1>TOP 100 CRYPTO COINS</h1>
       <select
         class="table-option"
         v-model.number="rowPerPage"
@@ -15,7 +15,7 @@
       </select>
     </header>
     <div class="label-row-wrapper">
-      <div class="icon">Logo</div>
+      <div class="logo">Logo</div>
       <div class="name">Name</div>
       <div class="symbol">Symbol</div>
       <div class="price">Price</div>
@@ -75,9 +75,9 @@ export default {
 <style scoped>
 .table {
   margin: 2.5%;
-  /* border: 5px solid #0000001a; */
+  border: 5px solid #0000001a;
   padding: 2.5%;
-  border-radius: 2%;
+  border-radius: 25px;
   box-shadow: inset 8px 8px 16px 0 rgb(0 0 0 / 20%),
     inset -8px -8px 16px 0 rgb(255 255 255 / 40%);
 }
@@ -149,17 +149,11 @@ header {
 .name {
   width: 20%;
 }
-.icon,
+.logo,
 .change {
   width: 18%;
 }
 .price-change {
   font-weight: 500;
-}
-.icon-img {
-  width: 30%;
-  padding-left: 15%;
-  padding-top: 10%;
-  padding-bottom: 10%;
 }
 </style>
